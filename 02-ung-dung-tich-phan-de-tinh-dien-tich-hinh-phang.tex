@@ -1,0 +1,214 @@
+\documentclass{article}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\title{2. ỨNG DỤNG TÍCH PHÂN ĐỂ TÍNH DIỆN TÍCH HÌNH PHẲNG}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{a) Hình phẳng giới hạn bởi một đồ thị hàm số, trục hoành và hai đường thẳng $x = a, x = b$}
+
+\paragraph{Khái niệm.} 
+Diện tích $S$ của hình phẳng giới hạn bởi đồ thị của hàm số $f(x)$ liên tục, trục hoành và hai đường thẳng $x = a, x = b$ ($a < b$), được tính bằng công thức:
+\[
+S = \int_{a}^{b} |f(x)| \, \mathrm{d}x
+\]
+
+\paragraph{Ví dụ 1.} Tính diện tích hình phẳng giới hạn bởi đồ thị của hàm số $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 2$.
+
+\textit{Giải:}  
+Diện tích hình phẳng cần tính là:
+\[
+S = \int_{0}^{2} |x^3| \, \mathrm{d}x = \int_{0}^{2} x^3 \, \mathrm{d}x = \left. \frac{x^4}{4} \right|_{0}^{2} = \frac{2^4}{4} - 0 = 4 - 0 = 4.
+\]
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=-0.5, xmax=2.5,
+        ymin=-1, ymax=9,
+        axis lines=middle,
+        xlabel=$x$, ylabel=$y$,
+        xtick={0,2},
+        ytick={2,4,6,8},
+        samples=100,
+        width=7cm, height=6cm,
+    ]
+        \addplot[name path=f, blue, domain=0:2] {x^3};
+        \addplot[name path=axis, draw=none] {0};
+        \addplot[pink!50] fill between[of=f and axis];
+        \draw[dashed] (axis cs:2,0) -- (axis cs:2,8);
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Ví dụ 2.} Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = \sin x$, trục hoành và hai đường thẳng $x = 0, x = 2\pi$.
+
+\textit{Giải:}  
+Diện tích hình phẳng cần tính là:
+\[
+S = \int_{0}^{2\pi} |\sin x| \, \mathrm{d}x = \int_{0}^{\pi} |\sin x| \, \mathrm{d}x + \int_{\pi}^{2\pi} |\sin x| \, \mathrm{d}x
+\]
+\[
+= \int_{0}^{\pi} \sin x \, \mathrm{d}x + \int_{\pi}^{2\pi} (-\sin x) \, \mathrm{d}x
+\]
+\[
+= \left. -\cos x \right|_{0}^{\pi} + \left. \cos x \right|_{\pi}^{2\pi} = (-\cos \pi + \cos 0) + (\cos 2\pi - \cos \pi) = (1 + 1) + (1 - (-1)) = 4.
+\]
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=-0.5, xmax=7,
+        ymin=-1.3, ymax=1.3,
+        axis lines=middle,
+        xlabel=$x$, ylabel=$y$,
+        xtick={0, 3.1416, 6.2831},
+        xticklabels={$0$, $\pi$, $2\pi$},
+        ytick={-1,1},
+        samples=200,
+        width=10cm, height=5cm,
+    ]
+        \addplot[name path=f, blue, domain=0:6.2831] {sin(deg(x))};
+        \addplot[name path=axis, draw=none, domain=0:6.2831] {0};
+        \addplot[pink!50] fill between[of=f and axis, domain=0:3.1416];
+        \addplot[pink!50] fill between[of=f and axis, domain=3.1416:6.2831];
+        \draw[dashed] (axis cs:3.1416,0) -- (axis cs:3.1416,1);
+        \draw[dashed] (axis cs:6.2831,0) -- (axis cs:6.2831,-1);
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Luyện tập 1.} Tính diện tích hình phẳng giới hạn bởi parabol $y = x^2 - 4$, trục hoành và hai đường thẳng $x = 0, x = 3$.
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=-1.5, xmax=4.5,
+        ymin=-5, ymax=6,
+        axis lines=middle,
+        xlabel=$x$, ylabel=$y$,
+        xtick={-1,1,2,3,4},
+        ytick={-4,-3,-2,-1,1,2,3,4,5},
+        samples=100,
+        width=7.5cm, height=7cm,
+    ]
+        % Đồ thị parabol y = x^2 - 4 (màu hồng/đỏ)
+        \addplot[name path=f, magenta, domain=-1:3.3] {x^2 - 4};
+        % Trục hoành để làm mốc tô màu
+        \addplot[name path=axis, draw=none, domain=-1:3.3] {0};
+        
+        % Tô màu cam phần diện tích giới hạn từ x = 0 đến x = 3
+        \addplot[orange!60] fill between[of=f and axis, domain=0:3];
+        
+        % Chỉ giữ lại đường gióng nét đứt phía trên ở x = 3, bỏ đoạn thừa ở x = 2
+        \draw[dashed, thick] (axis cs:3,0) -- (axis cs:3,5);
+        
+        % Nhãn tên hàm y = x^2 - 4 nằm dọc theo đồ thị giống SGK
+        \node[magenta, font=\small, rotate=50] at (axis cs:1.2, -1.8) {$y = x^2 - 4$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+
+\section*{b) Hình phẳng giới hạn bởi hai đồ thị hàm số và hai đường thẳng $x = a, x = b$}
+
+\paragraph{Khái niệm.} 
+Diện tích $S$ của hình phẳng giới hạn bởi đồ thị của hai hàm số $f(x), g(x)$ liên tục trên đoạn $[a; b]$ và hai đường thẳng $x = a, x = b$, được tính bằng công thức:
+\[
+S = \int_{a}^{b} |f(x) - g(x)| \, \mathrm{d}x
+\]
+
+\paragraph{Chú ý.} Nếu hiệu $f(x) - g(x)$ không đổi dấu trên đoạn $[a; b]$ thì:
+\[
+\int_{a}^{b} |f(x) - g(x)| \, \mathrm{d}x = \left| \int_{a}^{b} (f(x) - g(x)) \, \mathrm{d}x \right|
+\]
+
+\paragraph{Ví dụ 3.} Tính diện tích hình phẳng giới hạn bởi hai parabol $y = 4 - x^2$, $y = x^2$ và hai đường thẳng $x = -1, x = 1$.
+
+\textit{Giải:}  
+Diện tích hình phẳng cần tính là:
+\[
+S = \int_{-1}^{1} |(4 - x^2) - x^2| \, \mathrm{d}x = \int_{-1}^{1} |4 - 2x^2| \, \mathrm{d}x
+\]
+\[
+= \int_{-1}^{1} (4 - 2x^2) \, \mathrm{d}x = \left. \left( 4x - \frac{2}{3}x^3 \right) \right|_{-1}^{1} = \left( 4 - \frac{2}{3} \right) - \left( -4 + \frac{2}{3} \right) = \frac{10}{3} - \left( -\frac{10}{3} \right) = \frac{20}{3}.
+\]
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=-2.5, xmax=2.5,
+        ymin=-1.5, ymax=5.5,
+        axis lines=middle,
+        xlabel=$x$, ylabel=$y$,
+        xtick={-1,1},
+        ytick={1,2,3,4},
+        samples=100,
+        width=8cm, height=7.5cm,
+    ]
+        % Đồ thị y = 4 - x^2 (magenta) và y = x^2 (blue)
+        \addplot[name path=f, magenta, domain=-2.3:2.3] {4 - x^2};
+        \addplot[name path=g, blue, domain=-1.9:1.9] {x^2};
+        \addplot[orange!60] fill between[of=f and g, domain=-1:1];
+        
+        % Các đường gióng đứt đoạn
+        \draw[dashed, thick] (axis cs:-1,0) -- (axis cs:-1,3);
+        \draw[dashed, thick] (axis cs:1,0) -- (axis cs:1,3);
+        
+        % Đặt nhãn sát đuôi đồ thị đỏ và đẩy nhãn xanh cao lên
+        \node[magenta, font=\small] at (axis cs:-1.5, 3.8) {$y = 4 - x^2$};
+        \node[blue, font=\small] at (axis cs:1.3, 3.3) {$y = x^2$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\paragraph{Ví dụ 4.} Tính diện tích hình phẳng giới hạn bởi đồ thị hai hàm số $y = \sin x$, $y = \cos x$ và hai đường thẳng $x = 0, x = \frac{\pi}{4}$.
+
+\textit{Giải:}  
+Diện tích hình phẳng cần tính là:
+\[
+S = \int_{0}^{\frac{\pi}{4}} |\sin x - \cos x| \, \mathrm{d}x = \int_{0}^{\frac{\pi}{4}} (\cos x - \sin x) \, \mathrm{d}x
+\]
+\[
+= \left. (\sin x + \cos x) \right|_{0}^{\frac{\pi}{4}} = \left( \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} \right) - (0 + 1) = \sqrt{2} - 1.
+\]
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        xmin=-0.2, xmax=1.6,
+        ymin=-0.2, ymax=1.3,
+        axis lines=middle,
+        xlabel=$x$, ylabel=$y$,
+        xtick={0.7854},
+        xticklabels={$\frac{\pi}{4}$},
+        ytick={0.707},
+        yticklabels={$\frac{\sqrt{2}}{2}$},
+        samples=200,
+        width=9cm, height=6cm,
+    ]
+        % Đồ thị y = sin(x) (blue) và y = cos(x) (red)
+        \addplot[name path=f, blue, domain=0:1.3] {sin(deg(x))};
+        \addplot[name path=g, red, domain=0:1.3] {cos(deg(x))};
+        \addplot[orange!60] fill between[of=g and f, domain=0:0.7854];
+        
+        % Đường gióng nét đứt tại pi/4
+        \draw[dashed, thick] (axis cs:0.7854,0) -- (axis cs:0.7854,0.707);
+        
+        % Nhãn sin(x) ở trên và dịch nhãn cos(x) xuống hẳn phía dưới vùng trống bên phải
+        \node[blue, font=\small] at (axis cs:1.2, 1.05) {$y = \sin x$};
+        \node[red, font=\small] at (axis cs:1.2, 0.22) {$y = \cos x$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\paragraph{Luyện tập 2.} Tính diện tích hình phẳng giới hạn bởi đồ thị của các hàm số $y = \sqrt{x}$, $y = x - 2$ và hai đường thẳng $x = 1, x = 4$.
+
+\end{document}
