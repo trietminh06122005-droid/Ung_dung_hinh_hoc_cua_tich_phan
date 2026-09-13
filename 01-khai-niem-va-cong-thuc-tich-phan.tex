@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+
+\title{KHÁI NIỆM VÀ TÍCH CHẤT CỦA TÍCH PHÂN}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section*{1. Khái niệm tích phân}
+
+Cho $f(x)$ là hàm số liên tục trên đoạn $[a, b]$. Nếu $F(x)$ là một nguyên hàm của $f(x)$ thì hiệu số $F(b) - F(a)$ được gọi là tích phân từ $a$ đến $b$ của hàm số $f(x)$, kí hiệu là:
+
+\[\int_{a}^{b} f(x) \, dx
+
+\paragraph{Chú ý.}
+
+\begin{enumerate}
+    \item[a)] Hiệu $F(b) - F(a)$ thường được kí hiệu là $\left. F(x) \right|_a^b$.
+    
+    Như vậy
+    \[
+    \int_a^b f(x)\mathrm{d}x = \left. F(x) \right|_a^b.
+    \]
+
+    \item[b)] Ta gọi $\displaystyle\int_a^b$ là dấu tích phân, $a$ là cận dưới, $b$ là cận trên, $f(x)\mathrm{d}x$ là \textit{biểu thức dưới dấu tích phân} và $f(x)$ là hàm số dưới dấu tích phân.
+
+    \item[c)] Trong trường hợp $a = b$ hoặc $a > b$, ta quy ước:
+    \[
+    \int_a^a f(x)\mathrm{d}x = 0; \quad \int_a^b f(x)\mathrm{d}x = -\int_b^a f(x)\mathrm{d}x.
+    \]
+\end{enumerate}
+\paragraph{Ví dụ.} Tính:
+\[
+\text{a) } \int_{-1}^{3} x^2 \, \mathrm{d}x
+\]
+
+\paragraph{Giải}
+\[
+\text{a) } \int_{-1}^{3} x^2 \, \mathrm{d}x = \left. \frac{x^3}{3} \right|_{-1}^{3} = \frac{1}{3} \left[ 3^3 - (-1)^3 \right] = \frac{28}{3}.
+\]
+\section*{2. Tính chất của tích phân}
+
+\begin{enumerate}
+    \item $\int_{a}^{a} f(x) \, dx = 0$
+    \item $\int_{a}^{b} f(x) \, dx = -\int_{b}^{a} f(x) \, dx$
+    \item $\int_{a}^{b} k \cdot f(x) \, dx = k \cdot \int_{a}^{b} f(x) \, dx \quad (k \text{ là hằng số})$
+    \item $\int_{a}^{b} [f(x) \pm g(x)] \, dx = \int_{a}^{b} f(x) \, dx \pm \int_{a}^{b} g(x) \, dx$
+    \item $\int_{a}^{c} f(x) \, dx = \int_{a}^{b} f(x) \, dx + \int_{b}^{c} f(x) \, dx \quad (\forall b \in [a, c])$
+    \item Nếu $f(x) \ge 0, \forall x \in [a, b]$ thì $\int_{a}^{b} f(x) \, dx \ge 0$.
+\end{enumerate}
+
+\section*{3. Các công thức nguyên hàm, tích phân cơ bản}
+
+\paragraph{a) Hàm số lũy thừa và hàm đa thức:}
+\[
+\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1) \implies \int_{a}^{b} x^n \, dx = \left[ \frac{x^{n+1}}{n+1} \right]_{a}^{b}
+\]
+\[
+\int \frac{1}{x} \, dx = \ln|x| + C \implies \int_{a}^{b} \frac{1}{x} \, dx = \left[ \ln|x| \right]_{a}^{b} \quad (a, b \neq 0 \text{ cùng dấu})
+\]
+\[
+\int \frac{1}{\sqrt{x}} \, dx = 2\sqrt{x} + C \quad (x > 0)
+\]
+
+\paragraph{b) Hàm số mũ và lôgarit:}
+\[
+\int e^x \, dx = e^x + C \implies \int_{a}^{b} e^x \, dx = \left[ e^x \right]_{a}^{b}
+\]
+\[
+\int a^x \, dx = \frac{a^x}{\ln a} + C \quad (0 < a \neq 1)
+\]
+
+\paragraph{c) Hàm số lượng giác:}
+\[
+\int \cos x \, dx = \sin x + C \implies \int_{a}^{b} \cos x \, dx = \left[ \sin x \right]_{a}^{b}
+\]
+\[
+\int \sin x \, dx = -\cos x + C \implies \int_{a}^{b} \sin x \, dx = \left[ -\cos x \right]_{a}^{b}
+\]
+\[
+\int \frac{1}{\cos^2 x} \, dx = \tan x + C \quad \left(x \neq \frac{\pi}{2} + k\pi\right)
+\]
+\[
+\int \frac{1}{\sin^2 x} \, dx = -\cot x + C \quad (x \neq k\pi)
+\]
+
+\section*{4. Các phương pháp tính tích phân}
+
+\paragraph{1. Phương pháp Đổi biến số (Đổi biến dạng 1):}
+Giả sử tích phân có dạng $I = \int_{a}^{b} f(u(x)) \cdot u'(x) \, dx$:
+\begin{itemize}
+    \item Bước 1: Đặt $t = u(x) \implies dt = u'(x) dx$.
+    \item Bước 2: Đổi cận: Khi $x = a \implies t = u(a)$; khi $x = b \implies t = u(b)$.
+    \item Bước 3: Chuyển tích phân về biến $t$: $I = \int_{u(a)}^{u(b)} f(t) \, dt$.
+\end{itemize}
+
+\paragraph{2. Phương pháp Tích phân Phân đoạn:}
+Công thức tích phân phân đoạn:
+\[
+\int_{a}^{b} u \, dv = \left. (u \cdot v) \right|_{a}^{b} - \int_{a}^{b} v \, du
+\]
+\textbf{Thứ tự ưu tiên chọn $u$:} *"Nhất lô, nhì đa, tam lượng, tứ mũ"* ($\ln/x \to \text{Đa thức} \to \text{Lượng giác} \to e^x$).
+
+\end{document}
