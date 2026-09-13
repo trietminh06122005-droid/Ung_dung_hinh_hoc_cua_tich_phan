@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\begin{document}
+
+\section*{4. ỨNG DỤNG TÍCH PHÂN ĐỂ TÍNH DIỆN TÍCH MẶT TRÒN XOAY}
+
+Cho hình thang cong giới hạn bởi 
+$\begin{cases} 
+a \le x \le b \\ 
+y = 0 \\ 
+y = f(x) 
+\end{cases}$ 
+với $f \in C^1[a, b]$. Quay hình thang cong này quanh trục $Ox$ thì ta được một vật thể tròn xoay. Khi đó diện tích xung quanh của vật thể được tính theo công thức:
+
+\begin{equation}
+S = 2\pi \int_{a}^{b} |f(x)| \sqrt{1 + f'^2(x)} \, \mathrm{d}x
+\end{equation}
+
+Tương tự nếu quay hình thang cong 
+$\begin{cases} 
+c \le y \le d \\ 
+x = 0 \\ 
+x = \varphi(y) 
+\end{cases}$ 
+với $\varphi \in C^1[c, d]$, quanh trục $Oy$ thì:
+
+\begin{equation}
+S = 2\pi \int_{c}^{d} |\varphi(y)| \sqrt{1 + \varphi'^2(y)} \, \mathrm{d}y
+\end{equation}
+
+\bigskip
+
+\noindent\textbf{Ví dụ.} Tính diện tích mặt tròn xoay tạo nên khi quay các đường sau:
+
+\noindent\textbf{a/} $y = \tan x, \, 0 < x \le \frac{\pi}{4}$ quanh trục $Ox$.
+
+\noindent\textbf{b/} $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ quanh trục $Oy \, (a > b)$.
+
+\noindent\textbf{c/} $9y^2 = x(3 - x)^2, \, 0 \le x \le 3$ quanh trục $Ox$.
+
+\bigskip
+
+\noindent\textbf{Lời giải:}
+
+\noindent\textbf{a/} Áp dụng công thức (1) ta có:
+\[
+S = 2\pi \int_{0}^{\frac{\pi}{4}} \tan x \sqrt{1 + (1 + \tan^2 x)} \, \mathrm{d}x
+\]
+\[
+= 2\pi \int_{0}^{1} t \sqrt{1 + (1 + t^2)^2} \cdot \frac{\mathrm{d}t}{1 + t^2} \quad (\text{đặt } t = \tan x)
+\]
+\[
+= \pi \int_{0}^{1} \frac{\sqrt{1 + (1 + t^2)^2}}{1 + t^2} \, \mathrm{d}(t^2 + 1)
+\]
+\[
+= \pi \int_{1}^{2} \frac{\sqrt{1 + s^2}}{s} \, \mathrm{d}s \quad (\text{đặt } s = 1 + t^2)
+\]
+\[
+= \pi \int_{\sqrt{2}}^{\sqrt{5}} \left(1 + \frac{1}{u^2 - 1}\right) \mathrm{d}u
+\]
+\[
+= \pi \left\{ \sqrt{5} - \sqrt{2} + \frac{1}{2} \left[ \ln \frac{\sqrt{5} - 1}{\sqrt{2} - 1} - \ln \frac{\sqrt{5} + 1}{\sqrt{2} + 1} \right] \right\}
+\]
+
+\bigskip
+
+\noindent\textbf{b/} Nhận xét tính đối xứng của miền và áp dụng công thức (2) ta có:
+\[
+S = 2 \cdot 2\pi \int_{0}^{b} \frac{a}{b} \sqrt{b^2 - y^2} \cdot \sqrt{1 + \left( \frac{a}{b} \frac{y}{\sqrt{b^2 - y^2}} \right)^2} \, \mathrm{d}y
+\]
+\[
+= 4\pi \frac{a}{b} \int_{0}^{b} \sqrt{b^4 + (a^2 - b^2)y^2} \, \mathrm{d}y
+\]
+\[
+= 4\pi \frac{a}{b} \sqrt{a^2 - b^2} \int_{0}^{b} \sqrt{y^2 + \frac{b^4}{a^2 - b^2}} \, \mathrm{d}y
+\]
+\[
+= 4\pi \frac{a}{b} \sqrt{a^2 - b^2} \int_{0}^{b} \sqrt{y^2 + \beta} \, \mathrm{d}y \quad \left( \text{đặt } \beta = \frac{b^4}{a^2 - b^2} \right)
+\]
+\[
+= 4\pi \frac{a}{b} \sqrt{a^2 - b^2} \cdot \frac{1}{2} \left[ y \sqrt{y^2 + \beta} + \beta \ln |y + \sqrt{y^2 + \beta}| \right] \Bigg|_{0}^{b}
+\]
+\[
+\left( \int \sqrt{y^2 + \beta} \, \mathrm{d}y = \frac{1}{2} \left[ y \sqrt{y^2 + \beta} + \beta \ln |y + \sqrt{y^2 + \beta}| \right] \right)
+\]
+
+\bigskip
+
+\noindent\textbf{c/} Trước hết:
+\[
+9y^2 = x(3 - x)^2 \implies 18yy' = 3(3 - x)(1 - x) \implies y' = \frac{(3 - x)(1 - x)}{6y} \implies y'^2 = \frac{(1 - x)^2}{4x}
+\]
+Nên áp dụng công thức (1) ta có:
+\[
+S = 2\pi \int_{0}^{3} \frac{\sqrt{x}(3 - x)}{3} \cdot \sqrt{1 + \frac{(1 - x)^2}{4x}} \, \mathrm{d}x = 2\pi \cdot \frac{1}{6} \int_{0}^{3} (3 - x)(1 + x) \, \mathrm{d}x = 3\pi
+\]
+
+\end{document}
