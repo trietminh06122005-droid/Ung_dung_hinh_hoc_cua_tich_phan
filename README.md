@@ -38,7 +38,7 @@ Tài liệu bao gồm các chủ đề chính sau:
 ---
 
 ## 🛠️ Công nghệ sử dụng
-* **LaTeX / Typst**: Dinh dạng văn bản toán học, công thức và vẽ hình minh họa bằng TikZ/pgfplots.
+* **LaTeX / Typst**: Định dạng văn bản toán học, công thức và vẽ hình minh họa bằng TikZ/pgfplots.
 * **GitHub**: Quản lý phiên bản mã nguồn tài liệu.
 
 ---
