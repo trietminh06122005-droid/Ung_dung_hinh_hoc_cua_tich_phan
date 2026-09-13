@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\begin{document}
+
+\section*{5. ỨNG DỤNG TÍCH PHÂN TÍNH ĐỘ DÀI ĐƯỜNG CONG PHẲNG}
+
+\noindent\textbf{a) Trường hợp đường cong $AB$ cho bởi phương trình $y = f(x)$:}
+\[
+AB \begin{cases} 
+y = f(x) \\ 
+a \le x \le b \\ 
+f \in C^1[a, b] 
+\end{cases} 
+\quad \text{thì} \quad 
+s = \int_{a}^{b} \sqrt{1 + [f'(x)]^2} \, \mathrm{d}x \tag{3}
+\]
+
+\bigskip
+
+\noindent\textbf{b) Trường hợp đường cong $AB$ cho bởi phương trình tham số:}
+\[
+AB \begin{cases} 
+x = x(t) \\ 
+y = y(t) \\ 
+\alpha \le t \le \beta \\ 
+x(t), y(t) \in C^1[a, b] \\ 
+x'^2(t) + y'^2(t) > 0 \quad \forall t \in [\alpha, \beta] 
+\end{cases} 
+\quad \text{thì} \quad 
+s = \int_{\alpha}^{\beta} \sqrt{[x'(t)]^2 + [y'(t)]^2} \, \mathrm{d}t \tag{4}
+\]
+
+\bigskip
+
+\noindent\textbf{c) Trường hợp đường cong $AB$ cho bởi phương trình trong toạ độ cực:}
+\[
+AB \begin{cases} 
+r = r(\varphi) \\ 
+\alpha \le \varphi \le \beta \\ 
+r(\varphi) \in C^1[\alpha, \beta] 
+\end{cases} 
+\quad \text{thì} \quad 
+s = \int_{\alpha}^{\beta} \sqrt{r^2(\varphi) + r'^2(\varphi)} \, \mathrm{d}\varphi \tag{5}
+\]
+
+\bigskip
+
+\noindent\textbf{Ví dụ.} Tính độ dài đường cong:
+
+\noindent\textbf{a/} $y = \ln \frac{e^x + 1}{e^x - 1}$ khi $x$ biến thiên từ $1$ đến $2$.
+
+\noindent\textbf{b/} 
+$\begin{cases} 
+x = a\left(\cos t + \ln \tan \frac{t}{2}\right) \\ 
+y = a \sin t 
+\end{cases}$ 
+khi $t$ biến thiên từ $\frac{\pi}{3}$ đến $\frac{\pi}{2}$.
+
+\bigskip
+
+\noindent\textbf{Lời giải:}
+
+\noindent\textbf{a/} Ta có:
+\[
+1 + y'^2(x) = 1 + \left( \frac{e^x}{e^x + 1} - \frac{e^x}{e^x - 1} \right)^2 = \left( \frac{e^{2x} + 1}{e^{2x} - 1} \right)^2
+\]
+Nên áp dụng công thức (3) ta được:
+\[
+s = \int_{1}^{2} \frac{e^{2x} + 1}{e^{2x} - 1} \, \mathrm{d}x \;\; \stackrel{(t = e^{2x})}{=} \int_{e^2}^{e^4} \frac{t + 1}{2t(t - 1)} \, \mathrm{d}t = \ln \frac{e^2 + 1}{e^2}
+\]
+
+\bigskip
+
+\noindent\textbf{b/} Áp dụng công thức (4) ta có:
+\[
+x'^2(t) + y'^2(t) = a^2 \cdot \frac{\cos^2 t}{\sin^2 t} \implies s = a \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} \sqrt{\frac{\cos^2 t}{\sin^2 t}} \, \mathrm{d}t = a \ln \sqrt{\frac{2}{\sqrt{3}}}
+\]
+
+\end{document}
