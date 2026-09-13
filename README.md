@@ -10,38 +10,31 @@ Mục tiêu của dự án là xây dựng một tài liệu có cấu trúc rõ
 
 Tài liệu dự kiến bao gồm các chủ đề chính:
 
-1. **Diện tích hình phẳng**
-   - Diện tích hình phẳng giới hạn bởi đường cong và trục hoành
-   - Diện tích hình phẳng giới hạn bởi hai hay nhiều đường cong
-   - Diện tích hình phẳng trong tọa độ cực
-   - Các bài toán ứng dụng thực tế
+1. **Khái niệm và tính chất của tích phân**
+   - Khái niệm tích phân
+   - Các tính chất của tích phân
+   - Các công thức nguyên hàm, tích phân cơ bản
+   - Các phương pháp tính tích phân
 
-2. **Thể tích khối tròn xoay**
-   - Thể tích vật thể biết diện tích thiết diện
-   - Thể tích khối tròn xoay quay quanh trục $Ox$ (Phương pháp đĩa/vòng xuyến)
-   - Thể tích khối tròn xoay quay quanh trục $Oy$ (Phương pháp vỏ trụ)
-   - Thể tích khối tròn xoay quanh trục bất kỳ
+2. **Ứng dụng tích phân để tính diện tích hình phẳng**
+   - Hình phẳng giới hạn bởi một đồ thị hàm số, trục hoành và hai đường thẳng x=a, x=b
+   - Hình phẳng giới hạn bởi hai đồ thị hàm số và hai đường thẳng x=a, x=b
 
-3. **Độ dài cung tròn**
-   - Độ dài cung đường cong cho bởi hàm số $y = f(x)$ hoặc $x = g(y)$
-   - Độ dài cung đường cong cho bởi phương trình tham số
-   - Độ dài cung đường cong trong tọa độ cực
+3. **Ứng dụng tích phân để tính thể tích vật thể**
+   - Tính thể tích của vật thể
+   - Tính thể tích tròn xoay
 
-4. **Diện tích mặt tròn xoay**
-   - Diện tích mặt tròn xoay quanh trục $Ox$
-   - Diện tích mặt tròn xoay quanh trục $Oy$
-   - Ứng dụng trong việc tính diện tích các hình học không gian đặc biệt
+4. **Ứng dụng tích phân để tính diện tích mặt tròn xoay**
+   - Công thức và ví dụ
 
-5. **Ứng dụng thực tế và bài toán vật lý**
-   - Tính công thực hiện trong vật lý
-   - Lực tác dụng của chất lưu (áp suất nước lên đập)
-   - Khối lượng và trọng tâm của thanh/mảnh phẳng (Moment vô hướng)
+5. **Ứng dụng tích phân để tính độ dài đường cong phẳng**
+   - Trường hợp đường cong AB cho bởi phương trình y=f(x)
+   - Trường hợp đường cong AB cho bởi phương trình tham số
+   - Trường hợp đường cong AB cho bởi phương trình trong tọa độ cực
 
 6. **Bài tập và ứng dụng**
-   - Bài tập cơ bản
-   - Bài tập nâng cao
+   - Bài tập cơ bản, nâng cao
    - Bài toán thực tế
-   - Bài tập tổng hợp
 
 ---
 
