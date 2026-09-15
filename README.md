@@ -31,16 +31,16 @@ Tài liệu bao gồm các chủ đề chính sau:
 * Trường hợp đường cong $AB$ cho bởi phương trình tham số
 * Trường hợp đường cong $AB$ cho bởi phương trình trong toạ độ cực
 
-### 6. Bài tập và ứng dụng
+### 6. Một số bài tập ứng dụng hình học của tích phân
 * Bài tập cơ bản và nâng cao
 * Bài toán thực tế
 
 ---
 ## 🎯 Mục tiêu dự án
 
-* **Hệ thống hóa kiến thức:** Cung cấp đầy đủ định nghĩa, định lí và công thức cốt lõi về ứng dụng hình học của tích phân (diện tích hình phẳng, thể tích vật thể/khối tròn xoay, diện tích mặt tròn xoay và độ dài đường cong phẳng).
-* **Minh họa trực quan:** Tích hợp các hình vẽ, đồ thị chi tiết và chính xác bằng TikZ/pgfplots theo chuẩn sách giáo khoa.
-* **Lời giải chi tiết:** Xây dựng hệ thống ví dụ và bài tập từ cơ bản đến nâng cao kèm lời giải tường minh, dễ hiểu.
+* **Hệ thống hóa kiến thức:** Cung cấp định nghĩa, định lí và công thức về ứng dụng hình học của tích phân (diện tích hình phẳng, thể tích vật thể/khối tròn xoay, diện tích mặt tròn xoay và độ dài đường cong phẳng).
+* **Minh họa trực quan:** Tích hợp các hình vẽ, đồ thị chi tiết và chính xác bằng TikZ/pgfplots.
+* **Lời giải chi tiết:** Xây dựng hệ thống ví dụ và một số bài tập từ cơ bản đến nâng cao kèm lời giải tường minh, dễ hiểu.
 * **Chất lượng cao:** Biên soạn bằng LaTeX/Typst với bố cục khoa học, chuyên nghiệp, sẵn sàng biên dịch thành file PDF phục vụ học tập và giảng dạy.
 ---
 
@@ -51,7 +51,7 @@ Tài liệu bao gồm các chủ đề chính sau:
 ---
 ## 👥 Đối tượng độc giả
 
-* **Học sinh THPT:** Đặc biệt là học sinh lớp 12 đang ôn luyện cho các kỳ thi (kiểm tra định kỳ, tốt nghiệp THPT) cần hệ thống lý thuyết và bài tập ứng dụng tích phân chuẩn xác.
+* **Học sinh THPT:** Đặc biệt là học sinh lớp 12 đang ôn luyện cho các kỳ thi (kiểm tra định kỳ, tốt nghiệp THPT) cần hệ thống lý thuyết và bài tập ứng dụng tích phân.
 * **Sinh viên đại học:** Sinh viên các khối ngành Kỹ thuật, Công nghệ, Toán - Tin đang theo học các học phần Giải tích hoặc Toán cao cấp.
 * **Giáo viên và giảng viên Toán:** Giáo viên THPT và giảng viên đại học có thể sử dụng tài liệu làm nguồn tham khảo uy tín để biên soạn giáo án, bài giảng hoặc ngân hàng bài tập.
 * **Người tự học yêu toán học:** Những ai muốn tìm hiểu sâu hơn về bản chất, ý nghĩa hình học và các bài toán thực tiễn liên quan đến tích phân.
