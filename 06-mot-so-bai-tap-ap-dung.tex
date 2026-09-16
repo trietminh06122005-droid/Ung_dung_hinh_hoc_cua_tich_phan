@@ -1,16 +1,4 @@
-\documentclass{article}
-\usepackage[vietnamese]{babel}
-\usepackage{amsmath,amssymb}
-\usepackage{geometry}
-\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-
-\begin{document}
-
-\begin{center}
-    \section*{6. Một số bài tập ứng dụng hình học của tích phân}
-\end{center}
+\section*{6. MỘT SỐ BÀI TẬP ỨNG DỤNG HÌNH HỌC CỦA TÍCH PHÂN}
 
 \noindent\textbf{Bài 1.} Các nhà kinh tế sử dụng đường cong Lorenz để minh hoạ sự phân phối thu nhập trong một quốc gia. Gọi $x$ là đại diện cho phần trăm số gia đình trong một quốc gia và $y$ là phần trăm tổng thu nhập. Đường $y = x$ sẽ đại diện cho một quốc gia mà các gia đình có thu nhập như nhau. Đường cong Lorenz $y = f(x)$ biểu thị phân phối thu nhập thực tế. Diện tích hình phẳng giới hạn bởi hai đường này, với $0 \le x \le 100$, biểu thị ``sự bất bình đẳng về thu nhập'' của một quốc gia. Năm $2005$, đường cong Lorenz của Hoa Kỳ có thể được mô hình hoá bởi hàm số
 \[
@@ -399,4 +387,45 @@ V = V_1 - V_2 = 60\pi - 36\pi = 24\pi \approx 75,4 \, (\text{cm}^3) \xrightarrow
 \]
 
 
-\end{document}
+\noindent\textbf{Bài 6.} Từ hình chữ nhật $ABCD$ có chiều dài $AB = 8\text{ cm}$ và chiều rộng $BC = 4\text{ cm}$, người ta cắt bỏ miền $(R)$ được giới hạn bởi cạnh $CD$ của hình chữ nhật và hai nửa đường thẳng parabol có chung đỉnh là trung điểm cạnh $AB$, chúng lần lượt đi qua hai đầu mút $C, D$ của hình chữ nhật đó (phần tô đậm như hình vẽ). Phần còn lại cho quay quanh trục $AB$ để tạo nên một đồ vật làm trang trí, thể tích của vật trang trí đó bằng bao nhiêu $\text{cm}^3$. Viết kết quả làm tròn đến hàng đơn vị.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5, line width=0.8pt]
+    % Định nghĩa các điểm
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (4, 0);
+    \coordinate (O) at (2, 0);
+    \coordinate (C) at (4, 2);
+    \coordinate (D) at (0, 2);
+
+    % 1. Tô màu vùng xanh
+    % Đi từ D (0,2) sang C (4,2), vòng theo cung CO về O (tâm B(4,0)), rồi vòng theo cung OD về D (tâm A(0,0))
+    \fill[cyan!30] (D) -- (C) arc (90:180:2) arc (0:90:2) -- cycle;
+
+    % 2. Vẽ hình chữ nhật ABCD
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+    % 3. Vẽ 2 cung tròn (DO tâm A, CO tâm B)
+    \draw (2,0) arc (0:90:2);    % Cung OD (tâm A)
+    \draw (2,0) arc (180:90:2);  % Cung OC (tâm B)
+
+    % 4. Nhãn các đỉnh
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[below] at (O) {$O$};
+    \node[above right] at (C) {$C$};
+    \node[above left] at (D) {$D$};
+\end{tikzpicture}
+\end{center}
+\noindent\textbf{Lời giải}
+
+\noindent \textbf{Trả lời: 201}
+
+\noindent Phương trình Parabol $OC$ có dạng: $y^2 = ax$
+
+\noindent Mặt khác Parabol đi qua điểm $C(4; 4) \Rightarrow 4^2 = 4a \Rightarrow a = 4$
+
+\noindent Khi đó phương trình đường cong $OC$ là $y = \sqrt{4x}$.
+
+\noindent Thể tích của vật thể thu được là: 
+$$V = 2\left(\pi \int_{0}^{4} (\sqrt{4x})^2 \,\mathrm{d}x\right) = 64\pi \approx 201\,(\text{cm}^3)$$.
