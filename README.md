@@ -12,7 +12,7 @@ Tài liệu bao gồm các chủ đề chính sau:
 ### 1. Khái niệm và tính chất của tích phân
 * Khái niệm tích phân
 * Các tính chất của tích phân
-* Các công thức nguyên hàm, tích phân cơ bản
+* Các công thức nguyên hàm, tích phân
 * Các phương pháp tính tích phân
 
 ### 2. Ứng dụng tích phân để tính diện tích hình phẳng
@@ -40,8 +40,8 @@ Tài liệu bao gồm các chủ đề chính sau:
 
 * **Hệ thống hóa kiến thức:** Cung cấp định nghĩa, định lí và công thức về ứng dụng hình học của tích phân (diện tích hình phẳng, thể tích vật thể/khối tròn xoay, diện tích mặt tròn xoay và độ dài đường cong phẳng).
 * **Minh họa trực quan:** Tích hợp các hình vẽ, đồ thị chi tiết và chính xác bằng TikZ/pgfplots.
-* **Lời giải chi tiết:** Xây dựng hệ thống ví dụ và một số bài tập từ cơ bản đến nâng cao kèm lời giải tường minh, dễ hiểu.
-* **Chất lượng cao:** Biên soạn bằng LaTeX/Typst với bố cục khoa học, chuyên nghiệp, sẵn sàng biên dịch thành file PDF phục vụ học tập và giảng dạy.
+* **Lời giải chi tiết:** Xây dựng hệ thống ví dụ và một số bài tập cơ bản, nâng cao, bài toán thực tế kèm lời giải.
+* **Chất lượng:** Biên soạn bằng LaTeX/Typst với bố cục khoa học, chuyên nghiệp, sẵn sàng biên dịch thành file PDF phục vụ học tập và giảng dạy.
 ---
 
 ## 🛠️ Công nghệ sử dụng
