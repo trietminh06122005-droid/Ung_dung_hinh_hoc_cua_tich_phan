@@ -1,41 +1,42 @@
-\title{1. KHÁI NIỆM VÀ TÍCH CHẤT CỦA TÍCH PHÂN}
-\date{}
+\section*{1. KHÁI NIỆM VÀ TÍCH CHẤT CỦA TÍCH PHÂN}
 
-\maketitle
-
-\section*{1. Khái niệm tích phân}
+\subsection*{a. Khái niệm tích phân}
 
 Cho $f(x)$ là hàm số liên tục trên đoạn $[a, b]$. Nếu $F(x)$ là một nguyên hàm của $f(x)$ thì hiệu số $F(b) - F(a)$ được gọi là tích phân từ $a$ đến $b$ của hàm số $f(x)$, kí hiệu là:
 
-\[\int_{a}^{b} f(x) \, dx
+\[
+\int_{a}^{b} f(x) \, dx
+\]
 
 \paragraph{Chú ý.}
 
 \begin{enumerate}
-    \item[a)] Hiệu $F(b) - F(a)$ thường được kí hiệu là $\left. F(x) \right|_a^b$.
+    \item[1)] Hiệu $F(b) - F(a)$ thường được kí hiệu là $\left. F(x) \right|_a^b$.
     
     Như vậy
     \[
     \int_a^b f(x)\mathrm{d}x = \left. F(x) \right|_a^b.
     \]
 
-    \item[b)] Ta gọi $\displaystyle\int_a^b$ là dấu tích phân, $a$ là cận dưới, $b$ là cận trên, $f(x)\mathrm{d}x$ là \textit{biểu thức dưới dấu tích phân} và $f(x)$ là hàm số dưới dấu tích phân.
+    \item[2)] Ta gọi $\displaystyle\int_a^b$ là dấu tích phân, $a$ là cận dưới, $b$ là cận trên, $f(x)\mathrm{d}x$ là \textit{biểu thức dưới dấu tích phân} và $f(x)$ là hàm số dưới dấu tích phân.
 
-    \item[c)] Trong trường hợp $a = b$ hoặc $a > b$, ta quy ước:
+    \item[3)] Trong trường hợp $a = b$ hoặc $a > b$, ta quy ước:
     \[
     \int_a^a f(x)\mathrm{d}x = 0; \quad \int_a^b f(x)\mathrm{d}x = -\int_b^a f(x)\mathrm{d}x.
     \]
 \end{enumerate}
-\paragraph{Ví dụ.} Tính:
+
+\noindent\textbf{Ví dụ.} Tính:
 \[
-\text{a) } \int_{-1}^{3} x^2 \, \mathrm{d}x
+\int_{-1}^{3} x^2 \, \mathrm{d}x
 \]
 
-\paragraph{Giải}
+\noindent\textbf{Giải:}
 \[
-\text{a) } \int_{-1}^{3} x^2 \, \mathrm{d}x = \left. \frac{x^3}{3} \right|_{-1}^{3} = \frac{1}{3} \left[ 3^3 - (-1)^3 \right] = \frac{28}{3}.
+\int_{-1}^{3} x^2 \, \mathrm{d}x = \left. \frac{x^3}{3} \right|_{-1}^{3} = \frac{1}{3} \left[ 3^3 - (-1)^3 \right] = \frac{28}{3}.
 \]
-\section*{2. Tính chất của tích phân}
+
+\subsection*{b. Tính chất của tích phân}
 
 \begin{enumerate}
     \item $\int_{a}^{a} f(x) \, dx = 0$
@@ -46,56 +47,145 @@ Cho $f(x)$ là hàm số liên tục trên đoạn $[a, b]$. Nếu $F(x)$ là m�
     \item Nếu $f(x) \ge 0, \forall x \in [a, b]$ thì $\int_{a}^{b} f(x) \, dx \ge 0$.
 \end{enumerate}
 
-\section*{3. Các công thức nguyên hàm, tích phân cơ bản}
+\subsection*{c. Các công thức nguyên hàm, tích phân}
 
-\paragraph{a) Hàm số lũy thừa và hàm đa thức:}
+\paragraph{1. Bảng công thức nguyên hàm cơ bản:}
 \[
-\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1) \implies \int_{a}^{b} x^n \, dx = \left[ \frac{x^{n+1}}{n+1} \right]_{a}^{b}
-\]
-\[
-\int \frac{1}{x} \, dx = \ln|x| + C \implies \int_{a}^{b} \frac{1}{x} \, dx = \left[ \ln|x| \right]_{a}^{b} \quad (a, b \neq 0 \text{ cùng dấu})
-\]
-\[
-\int \frac{1}{\sqrt{x}} \, dx = 2\sqrt{x} + C \quad (x > 0)
-\]
 
-\paragraph{b) Hàm số mũ và lôgarit:}
-\[
-\int e^x \, dx = e^x + C \implies \int_{a}^{b} e^x \, dx = \left[ e^x \right]_{a}^{b}
-\]
-\[
-\int a^x \, dx = \frac{a^x}{\ln a} + C \quad (0 < a \neq 1)
-\]
+\begin{center}
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{|p{7.5cm}|p{7.5cm}|}
+    \hline
+    \centering \textbf{Nguyên hàm của các hàm số sơ cấp thường gặp} & 
+    \centering \textbf{Nguyên hàm của các hàm số hợp \newline (dưới đây $u = u(x)$)} \tabularnewline \hline
+    
+    $\displaystyle\int \mathrm{d}x = x + C$ & 
+    $\displaystyle\int \mathrm{d}u = u + C$ \tabularnewline \hline
+    
+    $\displaystyle\int x^{\alpha}\mathrm{d}x = \frac{x^{\alpha+1}}{\alpha+1} + C \quad (\alpha \neq -1)$ & 
+    $\displaystyle\int u^{\alpha}\mathrm{d}u = \frac{u^{\alpha+1}}{\alpha+1} + C \quad (\alpha \neq -1)$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{\mathrm{d}x}{x} = \ln|x| + C \quad (x \neq 0)$ & 
+    $\displaystyle\int \frac{\mathrm{d}u}{u} = \ln|u| + C \quad (u = u(x) \neq 0)$ \tabularnewline \hline
+    
+    $\displaystyle\int e^x \mathrm{d}x = e^x + C$ & 
+    $\displaystyle\int e^u \mathrm{d}u = e^u + C$ \tabularnewline \hline
+    
+    $\displaystyle\int a^x \mathrm{d}x = \frac{a^x}{\ln a} + C \quad (0 < a \neq 1)$ & 
+    $\displaystyle\int a^u \mathrm{d}u = \frac{a^u}{\ln a} + C \quad (0 < a \neq 1)$ \tabularnewline \hline
+    
+    $\displaystyle\int \cos x \, \mathrm{d}x = \sin x + C$ & 
+    $\displaystyle\int \cos u \, \mathrm{d}u = \sin u + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \sin x \, \mathrm{d}x = -\cos x + C$ & 
+    $\displaystyle\int \sin u \, \mathrm{d}u = -\cos u + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{\mathrm{d}x}{\cos^2 x} = \int (1+\tan^2 x)\mathrm{d}x = \tan x + C$ & 
+    $\displaystyle\int \frac{\mathrm{d}u}{\cos^2 u} = \int (1+\tan^2 u)\mathrm{d}u = \tan u + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{\mathrm{d}x}{\sin^2 x} = \int (1+\cot^2 x)\mathrm{d}x = -\cot x + C$ & 
+    $\displaystyle\int \frac{\mathrm{d}u}{\sin^2 u} = \int (1+\cot^2 u)\mathrm{d}u = -\cot u + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{\mathrm{d}x}{2\sqrt{x}} = \sqrt{x} + C \quad (x > 0)$ & 
+    $\displaystyle\int \frac{\mathrm{d}u}{2\sqrt{u}} = \sqrt{u} + C \quad (u > 0)$ \tabularnewline \hline
+\end{tabular}
+\end{center}
 
-\paragraph{c) Hàm số lượng giác:}
+\paragraph{2. Hàm số lượng giác:}
 \[
-\int \cos x \, dx = \sin x + C \implies \int_{a}^{b} \cos x \, dx = \left[ \sin x \right]_{a}^{b}
-\]
-\[
-\int \sin x \, dx = -\cos x + C \implies \int_{a}^{b} \sin x \, dx = \left[ -\cos x \right]_{a}^{b}
-\]
-\[
-\int \frac{1}{\cos^2 x} \, dx = \tan x + C \quad \left(x \neq \frac{\pi}{2} + k\pi\right)
-\]
-\[
-\int \frac{1}{\sin^2 x} \, dx = -\cot x + C \quad (x \neq k\pi)
-\]
 
-\section*{4. Các phương pháp tính tích phân}
+\begin{center}
+\renewcommand{\arraystretch}{2.2} % Khoảng cách dòng thoáng
+\begin{tabular}{|p{5cm}|p{5cm}|p{6.5cm}|}
+    \hline
+    \centering \textbf{Nguyên hàm của hàm số sơ cấp} & 
+    \centering \textbf{Nguyên hàm của hàm số hợp ($u=u(x)$)} & 
+    \centering \textbf{Nguyên hàm của hàm số hợp ($u=ax+b;\ a\neq 0$)} \tabularnewline \hline
+    
+    $\displaystyle\int \sin x \, \mathrm{d}x = -\cos x + C$ & 
+    $\displaystyle\int \sin u \, \mathrm{d}u = -\cos u + C$ & 
+    $\displaystyle\int \sin(ax+b)\,\mathrm{d}x = -\frac{1}{a}\cos(ax+b) + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \cos x \, \mathrm{d}x = \sin x + C$ & 
+    $\displaystyle\int \cos u \, \mathrm{d}u = \sin u + C$ & 
+    $\displaystyle\int \cos(ax+b)\,\mathrm{d}x = \frac{1}{a}\sin(ax+b) + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \tan x \, \mathrm{d}x = -\ln|\cos x| + C$ & 
+    $\displaystyle\int \tan u \, \mathrm{d}u = -\ln|\cos u| + C$ & 
+    $\displaystyle\int \tan(ax+b)\,\mathrm{d}x = -\frac{1}{a}\ln|\cos(ax+b)| + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \cot x \, \mathrm{d}x = \ln|\sin x| + C$ & 
+    $\displaystyle\int \cot u \, \mathrm{d}u = \ln|\sin u| + C$ & 
+    $\displaystyle\int \cot(ax+b)\,\mathrm{d}x = \frac{1}{a}\ln|\sin(ax+b)| + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{1}{\sin^2 x}\,\mathrm{d}x = -\cot x + C$ & 
+    $\displaystyle\int \frac{1}{\sin^2 u}\,\mathrm{d}u = -\cot u + C$ & 
+    $\displaystyle\int \frac{1}{\sin^2(ax+b)}\,\mathrm{d}x = -\frac{1}{a}\cot(ax+b) + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{1}{\cos^2 x}\,\mathrm{d}x = \tan x + C$ & 
+    $\displaystyle\int \frac{1}{\cos^2 u}\,\mathrm{d}u = \tan u + C$ & 
+    $\displaystyle\int \frac{1}{\cos^2(ax+b)}\,\mathrm{d}x = \frac{1}{a}\tan(ax+b) + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{1}{\sin x}\,\mathrm{d}x = \ln\left|\tan\frac{x}{2}\right| + C$ & 
+    $\displaystyle\int \frac{1}{\sin u}\,\mathrm{d}u = \ln\left|\tan\frac{u}{2}\right| + C$ & 
+    $\displaystyle\int \frac{\mathrm{d}x}{\sin(ax+b)} = \frac{1}{a}\ln\left|\tan\frac{ax+b}{2}\right| + C$ \tabularnewline \hline
+    
+    $\displaystyle\int \frac{1}{\cos x}\,\mathrm{d}x = \ln\left|\tan\left(\frac{x}{2}+\frac{\pi}{4}\right)\right|+C$ & 
+    $\displaystyle\int \frac{1}{\cos u}\,\mathrm{d}u = \ln\left|\tan\left(\frac{u}{2}+\frac{\pi}{4}\right)\right|+C$ & 
+    $\displaystyle\int \frac{\mathrm{d}x}{\cos(ax+b)} = \frac{1}{a}\ln\left|\tan\left(\frac{ax+b}{2}+\frac{\pi}{4}\right)\right|+C$ \tabularnewline \hline
+\end{tabular}
+\end{center}
+\paragraph{3. Bảng công thức nguyên hàm nâng cao:}
+\[
+\begin{align*}
+    &\int \sqrt{a^2 - x^2} \, \mathrm{d}x = \frac{x\sqrt{a^2 - x^2}}{2} + \frac{a^2}{2}\arcsin\frac{x}{a} + C \\
+    &\int \frac{\mathrm{d}x}{\sin(ax + b)} = \frac{1}{a}\ln\left|\tan\frac{ax + b}{2}\right| + C \\
+    &\int e^{ax}\cos bx \, \mathrm{d}x = \frac{e^{ax}(a\cos bx + b\sin bx)}{a^2 + b^2} + C \\
+    &\int e^{ax}\sin bx \, \mathrm{d}x = \frac{e^{ax}(a\sin bx - b\cos bx)}{a^2 + b^2} + C \\
+    &\int \frac{\mathrm{d}x}{a^2 + x^2} = \frac{1}{a}\arctan\frac{x}{a} + C \\
+    &\int \frac{\mathrm{d}x}{a^2 - x^2} = \frac{1}{2a}\ln\left|\frac{a + x}{a - x}\right| + C \\
+    &\int \frac{\mathrm{d}x}{\sqrt{x^2 + a^2}} = \ln\left(x + \sqrt{x^2 + a^2}\right) + C \\
+    &\int \frac{\mathrm{d}x}{\sqrt{a^2 - x^2}} = \arcsin\frac{x}{|a|} + C \\
+    &\int \frac{\mathrm{d}x}{x\sqrt{x^2 - a^2}} = \frac{1}{a}\arccos\left|\frac{a}{x}\right| + C \\
+    &\int \frac{\mathrm{d}x}{x\sqrt{x^2 + a^2}} = -\frac{1}{a}\ln\left|\frac{a + \sqrt{x^2 + a^2}}{x}\right| + C \\
+    &\int \ln(ax + b) \, \mathrm{d}x = \left(x + \frac{b}{a}\right)\ln(ax + b) - x + C
+\end{align*}
 
-\paragraph{1. Phương pháp Đổi biến số (Đổi biến dạng 1):}
-Giả sử tích phân có dạng $I = \int_{a}^{b} f(u(x)) \cdot u'(x) \, dx$:
+\subsection*{d. Các phương pháp tính tích phân}
+
 \begin{itemize}
-    \item Bước 1: Đặt $t = u(x) \implies dt = u'(x) dx$.
-    \item Bước 2: Đổi cận: Khi $x = a \implies t = u(a)$; khi $x = b \implies t = u(b)$.
-    \item Bước 3: Chuyển tích phân về biến $t$: $I = \int_{u(a)}^{u(b)} f(t) \, dt$.
+    \item \textbf{Tính tích phân bằng định nghĩa, tính chất và bảng nguyên hàm cơ bản}: Sử dụng trực tiếp bảng nguyên hàm các hàm số cơ bản, các tính chất tuyến tính của tích phân và định nghĩa tích phân để tính toán.
+    
+    \item \textbf{Phương pháp tích phân từng phần}: 
+    Sử dụng công thức $\int_{a}^{b} u(x)v'(x)\,\mathrm{d}x = u(x)v(x)\Big|_a^b - \int_{a}^{b} v(x)u'(x)\,\mathrm{d}x$ hoặc viết gọn là $\int_{a}^{b} u\,\mathrm{d}v = uv\Big|_a^b - \int_{a}^{b} v\,\mathrm{d}u$.
+    Các bước thực hiện gồm: viết biểu thức dưới dấu tích phân dưới dạng $u\,\mathrm{d}v$, tính $\mathrm{d}u$ và $v$, sau đó áp dụng công thức. 
+    Khi chọn $u$ và $\mathrm{d}v$, đối với dạng đa thức nhân hàm mũ hoặc lượng giác thì đặt $u$ là đa thức; đối với dạng đa thức nhân lô-garit thì đặt $u$ là hàm lô-garit; đối với dạng tích phân chứa $e^{ax}\cos bx$ hoặc $e^{ax}\sin bx$ cần thực hiện tích phân từng phần hai lần liên tiếp để quay lại tích phân ban đầu.
+
+    \item \textbf{Phương pháp đổi biến số}:
+    \begin{itemize}
+        \item \textit{Phương pháp đổi biến dạng I}: Đặt ẩn phụ $x = u(t)$ sao cho hàm hợp và vi phân được đơn giản hóa, đồng thời đổi cận tương ứng. Trường hợp chứa các căn thức $\sqrt{a^2-x^2}$, $\sqrt{a^2+x^2}$, $\sqrt{x^2-a^2}$ mà không biến đổi được bằng cách khác, ta đặt ẩn phụ bằng các hàm lượng giác thích hợp tương ứng để khử căn.
+        \item \textit{Phương pháp đổi biến dạng II}: Đặt ẩn phụ $u = u(x)$, tính vi phân $\mathrm{d}u = u'(x)\mathrm{d}x$ để đưa biểu thức về biến $u$ hoàn toàn và đổi cận từ $a, b$ sang $u(a), u(b)$.
+    \end{itemize}
+
+    \item \textbf{Tích phân hàm số phân thức hữu tỉ $\int \frac{P(x)}{Q(x)}\mathrm{d}x$}: 
+    Nếu bậc của $P(x) \ge$ bậc của $Q(x)$ thì thực hiện phép chia đa thức. 
+    Nếu bậc của $P(x) <$ bậc của $Q(x)$, phân tích thành các phân thức đơn giản tùy theo nghiệm của mẫu số $Q(x)$ như nghiệm đơn, nhân tử bậc hai vô nghiệm, nghiệm bội, hoặc sử dụng phương pháp đồng nhất hệ số đối với tam thức bậc hai ở mẫu.
+
+    \item \textbf{Tích phân các hàm lượng giác}: 
+    Sử dụng các công thức biến đổi cơ bản (tích thành tổng, hạ bậc) hoặc các phép đặt ẩn phụ chuyên dụng như đặt $t = \tan\frac{x}{2}$ cho dạng tổng quát $\int \frac{\mathrm{d}x}{a\sin x + b\cos x + c}$; chia tử và mẫu cho $\cos^2 x$ hoặc đặt $t = \tan x$ đối với dạng chứa $\sin^2 x, \cos^2 x, \sin x\cos x$ ở mẫu; hoặc dùng hệ số bất định cho dạng phân thức chứa bậc nhất của sin và cos. 
+    Ngoài ra có thể áp dụng tính chẵn lẻ của hàm số đối với $\sin x$ và $\cos x$ để chọn phép đặt $t = \tan x$ ($\cot x$), $t = \cos x$, hoặc $t = \sin x$.
+
+    \item \textbf{Tích phân hàm vô tỉ}: 
+    Khử căn thức bằng cách nhân lượng liên hợp, biến đổi thành bình phương đúng, hoặc đặt toàn bộ căn thức (hoặc phần phức tạp) làm ẩn phụ $t$ để làm mất hẳn căn.
+
+    \item \textbf{Tích phân chứa dấu giá trị tuyệt đối}: 
+    Lập bảng xét dấu của biểu thức trong dấu giá trị tuyệt đối trên miền lấy tích phân, sau đó chia miền tích phân thành các khoảng nhỏ để phá dấu giá trị tuyệt đối và tính từng phần.
+
+    \item \textbf{Tích phân một số hàm đặc biệt}:
+    \begin{itemize}
+        \item Hàm số liên tục và lẻ trên đoạn $[-a; a]$ có tích phân xác định bằng $0$: $\int_{-a}^{a} f(x)\,\mathrm{d}x = 0$.
+        \item Hàm số liên tục và chẵn trên đoạn $[-a; a]$ có thể rút gọn bằng hai lần tích phân trên nửa đoạn dương: $\int_{-a}^{a} f(x)\,\mathrm{d}x = 2\int_{0}^{a} f(x)\,\mathrm{d}x$.
+        \item Dạng tích phân có mẫu chứa hàm mũ $\int_{-\alpha}^{\alpha} \frac{f(x)}{a^x+1}\,\mathrm{d}x = \frac{1}{2}\int_{-\alpha}^{\alpha} f(x)\,\mathrm{d}x$.
+        \item Tính chất đối xứng của hàm lượng giác trên $[0; \frac{\pi}{2}]$: $\int_{0}^{\frac{\pi}{2}} f(\sin x)\,\mathrm{d}x = \int_{0}^{\frac{\pi}{2}} f(\cos x)\,\mathrm{d}x$.
+    \end{itemize}
 \end{itemize}
-
-\paragraph{2. Phương pháp Tích phân Phân đoạn:}
-Công thức tích phân phân đoạn:
-\[
-\int_{a}^{b} u \, dv = \left. (u \cdot v) \right|_{a}^{b} - \int_{a}^{b} v \, du
-\]
-\textbf{Thứ tự ưu tiên chọn $u$:} *"Nhất lô, nhì đa, tam lượng, tứ mũ"* ($\ln/x \to \text{Đa thức} \to \text{Lượng giác} \to e^x$).
-
-\end{document}
