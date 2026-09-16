@@ -1,19 +1,6 @@
-\documentclass{article}
-\usepackage[vietnamese]{babel}
-\usepackage{amsmath,amssymb}
-\usepackage{geometry}
-\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
+\section*{3. ỨNG DỤNG TÍCH PHÂN ĐỂ TÍNH THỂ TÍCH VẬT THỂ}
 
-\title{\textbf{3. ỨNG DỤNG TÍCH PHÂN ĐỂ TÍNH THỂ TÍCH VẬT THỂ}}
-\date{}
-
-\begin{document}
-
-\maketitle
-
-\section*{a) Tính thể tích của vật thể}
+\subsection*{a. Tính thể tích của vật thể}
 
 \paragraph{Công thức tính thể tích của vật thể.} 
 Cho một vật thể trong không gian $Oxyz$. Gọi $\mathcal{B}$ là phần vật thể giới hạn bởi hai mặt phẳng vuông góc với trục $Ox$ tại các điểm có hoành độ $x = a, x = b$. Một mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ là $x$ cắt vật thể theo mặt cắt có diện tích là $S(x)$. Giả sử $S(x)$ là hàm số liên tục trên đoạn $[a; b]$. Khi đó thể tích $V$ của phần vật thể $\mathcal{B}$ được tính bởi công thức:
@@ -23,11 +10,11 @@ V = \int_{a}^{b} S(x) \, \mathrm{d}x
 
 \paragraph{Ví dụ.} Tính thể tích của khối chóp đều có đáy là hình vuông cạnh $L$ và chiều cao là $h$.
 
-\textit{Giải:}  
-Chọn trục $Ox$ sao cho gốc $O$ trùng với đỉnh của khối chóp và trục đi qua tâm của đáy. Khi đó, đáy của khối chóp nằm trên mặt phẳng vuông góc với $Ox$ tại $x = h$.  
-Mỗi mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ bằng $x$ ($0 \le x \le h$), cắt khối chóp theo mặt cắt là hình vuông có cạnh là $a$.  
-Theo định lí Thales, ta có $\frac{x}{h} = \frac{a}{L}$, suy ra $a = \frac{L}{h}x$.  
-Do đó, diện tích của mặt cắt này là $S(x) = a^2 = \frac{L^2}{h^2}x^2$.  
+\noindent\textbf{Giải:} 
+Chọn trục $Ox$ sao cho gốc $O$ trùng với đỉnh của khối chóp và trục đi qua tâm của đáy. Khi đó, đáy của khối chóp nằm trên mặt phẳng vuông góc với $Ox$ tại $x = h$. 
+Mỗi mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ bằng $x$ ($0 \le x \le h$), cắt khối chóp theo mặt cắt là hình vuông có cạnh là $a$. 
+Theo định lí Thales, ta có $\frac{x}{h} = \frac{a}{L}$, suy ra $a = \frac{L}{h}x$. 
+Do đó, diện tích của mặt cắt này là $S(x) = a^2 = \frac{L^2}{h^2}x^2$. 
 
 Vậy thể tích của khối chóp này là:
 \[
@@ -69,11 +56,11 @@ V = \int_{0}^{h} S(x) \, \mathrm{d}x = \int_{0}^{h} \frac{L^2}{h^2}x^2 \, \mathr
 
 \vspace{0.5cm}
 
-\section*{b) Tính thể tích khối tròn xoay}
+\subsection*{b. Tính thể tích khối tròn xoay}
 
 \paragraph{Công thức tính thể tích khối tròn xoay.} 
-Cho hàm số $f(x)$ liên tục, không âm trên đoạn $[a; b]$.  
-Khi quay hình phẳng giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành và hai đường thẳng $x = a, x = b$ quanh trục hoành, ta được hình khối gọi là \textbf{khối tròn xoay}.  
+Cho hàm số $f(x)$ liên tục, không âm trên đoạn $[a; b]$. 
+Khi quay hình phẳng giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành và hai đường thẳng $x = a, x = b$ quanh trục hoành, ta được hình khối gọi là \textbf{khối tròn xoay}. 
 Khi cắt khối tròn xoay đó bởi một mặt phẳng vuông góc với trục $Ox$ tại điểm $x \in [a; b]$ được một hình tròn có bán kính $f(x)$. Thể tích của khối tròn xoay này là:
 \[
 V = \pi \int_{a}^{b} f^2(x) \, \mathrm{d}x
@@ -81,7 +68,7 @@ V = \pi \int_{a}^{b} f^2(x) \, \mathrm{d}x
 
 \paragraph{Ví dụ.} Tính thể tích khối tròn xoay sinh ra khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị hàm số $y = \sqrt{x}$, trục hoành và hai đường thẳng $x = 0, x = 1$.
 
-\textit{Giải:}  
+\noindent\textbf{Giải:} 
 Thể tích khối tròn xoay cần tính là:
 \[
 V = \pi \int_{0}^{1} f^2(x) \, \mathrm{d}x = \pi \int_{0}^{1} (\sqrt{x})^2 \, \mathrm{d}x = \pi \int_{0}^{1} x \, \mathrm{d}x = \left. \pi \frac{x^2}{2} \right|_{0}^{1} = \frac{\pi}{2}.
@@ -107,5 +94,3 @@ V = \pi \int_{0}^{1} f^2(x) \, \mathrm{d}x = \pi \int_{0}^{1} (\sqrt{x})^2 \, \m
     \end{axis}
 \end{tikzpicture}
 \end{center}
-
-\end{document}
